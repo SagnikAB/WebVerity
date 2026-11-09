@@ -1,0 +1,31 @@
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["backend/tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+pythonpath = ["."]
+
+markers = [
+  "integration: tests that touch live public services (example.com, IANA, abuse.ch)",
+  "live_pipeline: pipeline tests that reach the live network for a real scan",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "W",
+    "F",
+    "I",
+    "C4",
+    "B",
+    "UP",
+]
+ignore = [
+    "B008",
+    "E501",
+]
