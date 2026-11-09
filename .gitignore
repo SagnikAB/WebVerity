@@ -15,6 +15,11 @@ downloads/
 eggs/
 .eggs/
 lib/
+
+# Keep WebVerity frontend library files
+!frontend/src/lib/
+!frontend/src/lib/**
+
 lib64/
 parts/
 sdist/
